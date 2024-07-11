@@ -18,4 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demoAction/{num1}/{num2}', [DemoController::class, 'DemoAction']);
+Route::get('/sessionPut/{email}', [DemoController::class, 'SessionPut']);
+
+Route::get('/sessionPull', [DemoController::class, 'SessionPull']);
+
+Route::get('/sessionGet', [DemoController::class, 'SessionGet']);
+
+Route::get('/sessionForget', [DemoController::class, 'SessionForget']);
+
+Route::get('/sessionFlush', [DemoController::class, 'SessionFlush']);
