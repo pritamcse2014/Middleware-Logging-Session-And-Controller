@@ -19,7 +19,7 @@ class DemoMiddleware
         if ($key === "XYZ123") {
             return $next($request);
         } else {
-            return redirect("/hello2");
+            return response()->json("Invalid", 401);
         }
     }
 }
