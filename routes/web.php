@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DemoController;
+use App\Http\Middleware\DemoMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sessionPut/{email}', [DemoController::class, 'SessionPut']);
-
-Route::get('/sessionPull', [DemoController::class, 'SessionPull']);
-
-Route::get('/sessionGet', [DemoController::class, 'SessionGet']);
-
-Route::get('/sessionForget', [DemoController::class, 'SessionForget']);
-
-Route::get('/sessionFlush', [DemoController::class, 'SessionFlush']);
+Route::get('/hello', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
