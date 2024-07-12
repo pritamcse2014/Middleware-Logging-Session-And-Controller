@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 
 class DemoController extends Controller
 {
-    function DemoAction(Request $request):array {
-        return $request->header();
+    function DemoAction(Request $request):string {
+        return "Hello World!";
     }
 }
