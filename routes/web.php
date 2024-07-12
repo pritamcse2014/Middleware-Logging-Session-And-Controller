@@ -19,9 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['demo'])->group(function() {
-    Route::get('/hello1/{key}', [DemoController::class, 'DemoAction1']);
-    Route::get('/hello2/{key}', [DemoController::class, 'DemoAction2']);
-    Route::get('/hello3/{key}', [DemoController::class, 'DemoAction3']);
-    Route::get('/hello4/{key}', [DemoController::class, 'DemoAction4']);
-});
+Route::get('/hello1/{key}', [DemoController::class, 'DemoAction1']);
+Route::get('/hello2/{key}', [DemoController::class, 'DemoAction2']);
+Route::get('/hello3/{key}', [DemoController::class, 'DemoAction3']);
+Route::get('/hello4/{key}', [DemoController::class, 'DemoAction4']);
