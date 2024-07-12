@@ -15,11 +15,9 @@ class DemoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $key = $request->key;
-        if ($key === "XYZ123") {
-            return $next($request);
-        } else {
-            return response()->json("Invalid", 401);
-        }
+        // $request->headers->add(['email' => 'pritam.cse2014@gmail.com']);
+        // $request->headers->replace(['email' => 'pritam.cse2014@gmail.com']);
+        $request->headers->remove('email');
+        return $next($request);
     }
 }
