@@ -19,6 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/hello', [DemoController::class, 'DemoAction'])->middleware('throttle: 5, 1');
-
 Route::get('/hello', [DemoController::class, 'DemoAction']);

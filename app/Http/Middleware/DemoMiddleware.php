@@ -15,9 +15,6 @@ class DemoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // $request->headers->add(['email' => 'pritam.cse2014@gmail.com']);
-        // $request->headers->replace(['email' => 'pritam.cse2014@gmail.com']);
-        $request->headers->remove('email');
         return $next($request);
     }
 }
