@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\DemoController;
-use App\Http\Middleware\DemoMiddleware;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', [DemoController::class, 'DemoAction']);
+Route::get('/video', VideoController::class);
