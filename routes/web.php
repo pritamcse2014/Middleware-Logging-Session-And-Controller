@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/hello', [DemoController::class, 'DemoAction']);
 Route::get('/video', VideoController::class);
+Route::resource('photo', PhotoController::class);
