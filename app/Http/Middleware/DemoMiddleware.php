@@ -15,6 +15,7 @@ class DemoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        $request->headers->remove('email');
         return $next($request);
     }
 }
